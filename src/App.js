@@ -1,9 +1,11 @@
 
 import './App.css';
 import { useEffect, useState } from 'react';
+import {StateReact} from "./Components/StateReact"
 
 function App() {
-  const [users, setUsers] = useState([])
+
+/*   const [users, setUsers] = useState([])
   const [numbers, setNumbers] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 
   useEffect(() =>{
@@ -11,8 +13,8 @@ function App() {
     .then((response) => response.json())
     .then((json) =>setUsers(json));
   }, []);
-
-  const mapData = () => {
+ */
+  /* const mapData = () => {
     let numberLessThan5 = numbers
       .map((filtered) =>{
         return filtered * filtered
@@ -20,7 +22,7 @@ function App() {
       .filter((number) =>{
         return number <= 50;
       })
-    setNumbers(numberLessThan5)
+    setNumbers(numberLessThan5) */
     /* let square = numbers.map((number) => {
         return number * number;
     });
@@ -29,13 +31,12 @@ function App() {
       return user.id <= 5;
     });
 
-    setUsers(filteredData); */
-  };
-
-
+    setUsers(filteredData); 
+  };*/
   return (
     <div className="App">
-      <h1>Numbers</h1>
+      <StateReact/>
+      {/* <h1>Numbers</h1> */}
      {/*  <div className='card'>
       {users.map((user) =>(
         <div className='card-inner'>
@@ -45,13 +46,13 @@ function App() {
       ))}
       </div> */}
 
-        <div  className='card'>
+      {/*   <div  className='card'>
           {numbers.map((n) =>(
             <div className='card-inner'>{n}</div>
           ))}
         </div>
 
-      <button onClick={mapData}>See Mappedd Array</button>
+      <button onClick={mapData}>See Mappedd Array</button> */}
     </div>
   );
 }
