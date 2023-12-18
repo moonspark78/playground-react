@@ -3,19 +3,15 @@ import './App.css';
 
 function App() {
   return (
-    <div className="formulaire-container">
-    {/* Première ligne */}
-    <div className="formulaire-row">
-      <p className="formulaire-label">Email:</p>
-      <input type="text" placeholder="Saisir votre email" />
+    <div className="App">
+      <h1>Users</h1>
+      <div className='card'>
+        <div className='card-inner'>
+          <p>Nishant</p>
+          <p>Nishant 666</p>
+        </div>
+      </div>
     </div>
-
-    {/* Deuxième ligne */}
-    <div className="formulaire-row">
-      <p className="formulaire-label">Mot de passe:</p>
-      <input type="password" placeholder="Saisir votre mot de passe" />
-    </div>
-  </div>
   );
 }
 

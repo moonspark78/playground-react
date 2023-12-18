@@ -1,15 +1,9 @@
-.formulaire-container {
-  border: 1px solid #000;
-  padding: 10px;
-  width: 300px;
+.App {
+  text-align: center;
 }
 
-.formulaire-row {
-  display: flex;
-  margin-bottom: 10px;
-  justify-content: space-between;
-}
-
-.formulaire-label {
-  margin-right: 10px;
+.card{
+  border: 1px solid black;
+  width: 200px;
+  margin: 10px 10px;
 }
