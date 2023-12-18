@@ -1,20 +1,22 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { useEffect, useState } from 'react';
 
 function App() {
   const [users, setUsers] = useState([])
+
   useEffect(() =>{
     fetch("https://jsonplaceholder.typicode.com/users")
     .then((response) => response.json())
     .then((json) =>setUsers(json));
-  });
+  }, []);
 
   const mapData = () => {
-    let filteredData = users.filter((user) =>{
-      return user.name.includes("a")
-    })
-    console.log(filteredData);
+    let filteredData = users.filter((user) => {
+      return user.id <= 5;
+    });
+
+    setUsers(filteredData);
   };
 
 
