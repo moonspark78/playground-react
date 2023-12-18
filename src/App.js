@@ -8,7 +8,16 @@ function App() {
     fetch("https://jsonplaceholder.typicode.com/users")
     .then((response) => response.json())
     .then((json) =>setUsers(json));
-  })
+  });
+
+  const mapData = () => {
+    let filteredData = users.filter((user) =>{
+      return user.name.includes("a")
+    })
+    console.log(filteredData);
+  };
+
+
   return (
     <div className="App">
       <h1>Users</h1>
@@ -21,6 +30,7 @@ function App() {
       ))}
         
       </div>
+      <button onClick={mapData}>See Mappedd Array</button>
     </div>
   );
 }
