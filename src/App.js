@@ -17,6 +17,9 @@ function App() {
       .map((filtered) =>{
         return filtered * filtered
       })
+      .filter((number) =>{
+        return number <= 50;
+      })
     setNumbers(numberLessThan5)
     /* let square = numbers.map((number) => {
         return number * number;
