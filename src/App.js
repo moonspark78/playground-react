@@ -13,10 +13,15 @@ function App() {
   }, []);
 
   const mapData = () => {
-    let square = numbers.map((number) => {
+    let numberLessThan5 = numbers
+      .map((filtered) =>{
+        return filtered * filtered
+      })
+    setNumbers(numberLessThan5)
+    /* let square = numbers.map((number) => {
         return number * number;
     });
-    console.log(square);
+    console.log(square); */
    /*  let filteredData = users.filter((user) => {
       return user.id <= 5;
     });
