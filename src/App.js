@@ -13,10 +13,13 @@ function App() {
     <div className="App">
       <h1>Users</h1>
       <div className='card'>
+      {users.map((user) =>(
         <div className='card-inner'>
-          <p>Nishant</p>
-          <p>Nishant 666</p>
+          <p>{user.name}</p>
+          <p>{user.username}</p>
         </div>
+      ))}
+        
       </div>
     </div>
   );
