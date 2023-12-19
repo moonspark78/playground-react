@@ -4,7 +4,7 @@ export const Child = ({valueOfProps, changeName}) => {
   return (
     <div>
         <h1>{valueOfProps}</h1>
-        <button onClick={changeName}>Change Name</button>
+        <button onClick={() => changeName("Hello this is elodie")}>Change Name</button>
     </div>
   )
 }

@@ -3,8 +3,9 @@ import {Child} from "./Child"
 
 export const Props = () => {
     const [name, setName] = useState("Souli");
-    const changeName = () =>{
-        setName("alice")
+    const changeName = (value) =>{
+        console.log(value);
+        setName(value);
     };
 
 
