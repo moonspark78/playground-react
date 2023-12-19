@@ -2,10 +2,16 @@ import React, { useState } from 'react'
 import {Child} from "./Child"
 
 export const Props = () => {
-    const [name, serName] = useState("Souli")
+    const [name, setName] = useState("Souli");
+    const changeName = () =>{
+        setName("alice")
+    };
+
+
+
   return (
     <div>
-        <Child name={name}/>
+        <Child valueOfProps={name} changeName={changeName}/>
     </div>
   )
 }
