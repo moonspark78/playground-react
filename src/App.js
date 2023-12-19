@@ -2,6 +2,7 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import {StateReact} from "./Components/StateReact"
+import {Props} from "./Components/Props"
 
 function App() {
 
@@ -35,7 +36,8 @@ function App() {
   };*/
   return (
     <div className="App">
-      <StateReact/>
+      <Props/>
+      {/* <StateReact/> */}
       {/* <h1>Numbers</h1> */}
      {/*  <div className='card'>
       {users.map((user) =>(

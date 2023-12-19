@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const Child = () => {
+export const Child = ({name}) => {
   return (
-    <div>Child</div>
+    <div>
+        <h1>{name}</h1>
+    </div>
   )
 }
