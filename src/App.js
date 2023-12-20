@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import {StateReact} from "./Components/StateReact"
 import {Props} from "./Components/Props"
 import {InlineConditionalExpressions} from './Components/InlineConditionalExpressions'
+import {EventHandlingInReact} from './Components/EventHandlingInReact'
 
 function App() {
 
@@ -37,7 +38,8 @@ function App() {
   };*/
   return (
     <div className="App">
-    <InlineConditionalExpressions/>
+      <EventHandlingInReact/>
+      {/* <InlineConditionalExpressions/> */}
       {/* <Props/> */}
       {/* <StateReact/> */}
       {/* <h1>Numbers</h1> */}
