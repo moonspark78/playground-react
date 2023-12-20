@@ -2,11 +2,11 @@ import React from 'react'
 
 export const EventHandlingInReact = () => {
 
-  const addNums = () =>{
-    console.log(2+2);
+  const addNums = (num1, num2) =>{
+    console.log(num1+ num2);
   };
   const getInput = (event) => {
-    console.log(event.target);
+    console.log(event.target.name);
   };
 
 
