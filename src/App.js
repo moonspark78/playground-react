@@ -3,6 +3,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import {StateReact} from "./Components/StateReact"
 import {Props} from "./Components/Props"
+import {InlineConditionalExpressions} from './Components/InlineConditionalExpressions'
 
 function App() {
 
@@ -36,7 +37,8 @@ function App() {
   };*/
   return (
     <div className="App">
-      <Props/>
+    <InlineConditionalExpressions/>
+      {/* <Props/> */}
       {/* <StateReact/> */}
       {/* <h1>Numbers</h1> */}
      {/*  <div className='card'>
