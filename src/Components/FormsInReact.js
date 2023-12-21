@@ -7,12 +7,15 @@ export const FormsInReact = () => {
         let data = {[name]: value}
         setObjData({...objData,...data})
     }
-    console.log(objData);
-
+    const submit = (e) =>{
+        e.preventDefault();
+        console.log(objData);
+    };
 
 
 
   return (
+    <form onSubmit={submit}>
     <div className='to'>
         <h1>Forms</h1>
         <div className='form'>
@@ -46,13 +49,15 @@ export const FormsInReact = () => {
         />
 
             
-        <button>Submit</button>
+        <button type='submit' >Submit</button>
+        <button type='reset' >Reset</button>
 
         
 
 
         </div>
     </div>
+    </form>
    
   )
 }
