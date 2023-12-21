@@ -26,7 +26,11 @@ export const KeysInReact = () => {
 
   return (
     <div>
-        
+        <ul>
+            {numbers.map((number) =>{
+                return <li>{number}</li>
+            })}
+        </ul>
     </div>
   )
 }
