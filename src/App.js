@@ -5,6 +5,7 @@ import {StateReact} from "./Components/StateReact"
 import {Props} from "./Components/Props"
 import {InlineConditionalExpressions} from './Components/InlineConditionalExpressions'
 import {EventHandlingInReact} from './Components/EventHandlingInReact'
+import {KeysInReact} from './Components/KeysInReact'
 
 function App() {
 
@@ -38,7 +39,8 @@ function App() {
   };*/
   return (
     <div className="App">
-      <EventHandlingInReact/>
+      <KeysInReact/>
+      {/* <EventHandlingInReact/> */}
       {/* <InlineConditionalExpressions/> */}
       {/* <Props/> */}
       {/* <StateReact/> */}
