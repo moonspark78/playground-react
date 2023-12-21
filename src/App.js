@@ -12,7 +12,7 @@ import { SearchBarResults } from './Components/SearchBarResults';
 
 function App() {
 
-  const [results, setResults] = useState([]);
+  /* const [results, setResults] = useState([]); */
 
 /*   const [users, setUsers] = useState([])
   const [numbers, setNumbers] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
@@ -44,12 +44,12 @@ function App() {
   };*/
   return (
     <div className="App">
-      <div className='app-A'>
+      {/* <div className='app-A'>
         <div className='search-bar-container'>
           <SearchBar setResults={setResults}/>
           <SearchBarResults results={results}/>
         </div>
-      </div>
+      </div> */}
       {/* <FormsInReact/> */}
       {/* <KeysInReact/> */}
       {/* <EventHandlingInReact/> */}
