@@ -7,6 +7,8 @@ import {InlineConditionalExpressions} from './Components/InlineConditionalExpres
 import {EventHandlingInReact} from './Components/EventHandlingInReact'
 import {KeysInReact} from './Components/KeysInReact'
 import {FormsInReact} from './Components/FormsInReact'
+import { SearchBar } from './Components/SearchBar';
+import { SearchBarResults } from './Components/SearchBarResults';
 
 function App() {
 
@@ -40,7 +42,13 @@ function App() {
   };*/
   return (
     <div className="App">
-      <FormsInReact/>
+      <div className='app-A'>
+        <div className='search-bar-container'>
+          <SearchBar/>
+          <SearchBarResults/>
+        </div>
+      </div>
+      {/* <FormsInReact/> */}
       {/* <KeysInReact/> */}
       {/* <EventHandlingInReact/> */}
       {/* <InlineConditionalExpressions/> */}

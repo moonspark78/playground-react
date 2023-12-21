@@ -1,4 +1,5 @@
 import React from 'react'
+import "./SearchBarResults.css"
 
 export const SearchBarResults = () => {
   return (
