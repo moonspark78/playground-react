@@ -12,6 +12,8 @@ import { SearchBarResults } from './Components/SearchBarResults';
 
 function App() {
 
+  const [results, setResults] = useState([]);
+
 /*   const [users, setUsers] = useState([])
   const [numbers, setNumbers] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 
@@ -44,8 +46,8 @@ function App() {
     <div className="App">
       <div className='app-A'>
         <div className='search-bar-container'>
-          <SearchBar/>
-          <SearchBarResults/>
+          <SearchBar setResults={setResults}/>
+          <SearchBarResults results={results}/>
         </div>
       </div>
       {/* <FormsInReact/> */}
