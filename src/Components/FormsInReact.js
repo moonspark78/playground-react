@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./FormsInReact.css"
 
 export const FormsInReact = () => {
+    const [objData, setObjData] = useState({})
     const getInputs = (value, name) =>{
-        console.log(name);
+        let data = {[name]: value}
+        setObjData({...objData,...data})
     }
+    console.log(objData);
 
 
 
