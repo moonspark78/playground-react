@@ -48,3 +48,9 @@
   width: 230px;
 }
 
+.cc input{
+  border: solid 1px black;
+  margin-top: 10px;
+  height: 18px;
+  width: 190px;
+}
