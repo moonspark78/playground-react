@@ -1,7 +1,6 @@
 .App {
   text-align: center;
   width: 100%;
- 
 }
 
 .card{
@@ -29,3 +28,23 @@
   align-items: center;
   min-width: 200px;
 }
+
+.input-container{
+  border: solid 1px black;
+  width: 500px;
+  align-items: center;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 330px;
+  margin-bottom: 10px;
+}
+
+.input-container input{
+  border: solid 1px black;
+  margin-top: 10px;
+  height: 18px;
+  width: 230px;
+}
+
