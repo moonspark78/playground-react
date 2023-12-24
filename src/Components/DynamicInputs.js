@@ -3,11 +3,13 @@ import React, { useState } from 'react'
 
 export const DynamicInputs = () => {
     const [inputs, setInputs]= useState({});
+
     const getInputValue = (data) =>{
         let {name, value} = data.target;
         let input = {[name]: value};
-        setInputs(...inputs, ...input);
+        setInputs({...inputs, ...input});
     };
+    console.log(inputs);
 
 
 
