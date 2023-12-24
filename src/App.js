@@ -10,6 +10,7 @@ import {FormsInReact} from './Components/FormsInReact'
 import { SearchBar } from './Components/SearchBar';
 import { SearchBarResults } from './Components/SearchBarResults';
 import { DynamicInputs } from './Components/DynamicInputs';
+import { UncontrolledComponents } from './Components/UncontrolledComponents';
 
 function App() {
 
@@ -45,7 +46,8 @@ function App() {
   };*/
   return (
     <div className="App">
-    <DynamicInputs/>
+    <UncontrolledComponents/>
+    {/* <DynamicInputs/> */}
       {/* <div className='app-A'>
         <div className='search-bar-container'>
           <SearchBar setResults={setResults}/>
