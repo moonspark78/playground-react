@@ -12,6 +12,7 @@ import { SearchBarResults } from './Components/SearchBarResults';
 import { DynamicInputs } from './Components/DynamicInputs';
 import { UncontrolledComponents } from './Components/UncontrolledComponents';
 import { InnerHTML } from './Components/InnerHTML';
+import { FragmentsInReact } from './Components/FragmentsInReact';
 
 function App() {
 
@@ -47,7 +48,8 @@ function App() {
   };*/
   return (
     <div className="App">
-    <InnerHTML/>
+    <FragmentsInReact/>
+    {/* <InnerHTML/> */}
     {/* <UncontrolledComponents/> */}
     {/* <DynamicInputs/> */}
       {/* <div className='app-A'>
