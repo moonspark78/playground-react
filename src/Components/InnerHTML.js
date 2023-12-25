@@ -11,6 +11,7 @@ export const InnerHTML = () => {
     const getQuillData = (value) =>{
         setQuill(value);
     };
+    console.log(quill);
 
 
 
@@ -20,7 +21,7 @@ export const InnerHTML = () => {
     <>
         <h1 style={{textDecoration : "underline", color: "red", fontFamily: "inherit"}}>InnerHTML</h1>
         <div className='App'>
-            <div dangerouslySetInnerHTML={{__html: data}}></div>
+            <div dangerouslySetInnerHTML={{__html: quill}}></div>
             <div dangerouslySetInnerHTML={{__html: data2}}></div>
 
             <br/><br/><br/><ReactQuill onChange={getQuillData}/>
