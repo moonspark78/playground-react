@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 
@@ -23,6 +23,17 @@ export const RestAPI = () => {
             console.log(err);
         })
     };
+
+    useEffect(() => {
+        axios
+        .get("https://65899f2f324d4171525942ec.mockapi.io/users", )
+        .then((res) =>{
+            console.log(res.data);
+        })
+        .catch((err) =>{
+            console.log(err);
+        })
+    },[])
 
 
 
