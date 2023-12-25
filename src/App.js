@@ -11,6 +11,7 @@ import { SearchBar } from './Components/SearchBar';
 import { SearchBarResults } from './Components/SearchBarResults';
 import { DynamicInputs } from './Components/DynamicInputs';
 import { UncontrolledComponents } from './Components/UncontrolledComponents';
+import { InnerHTML } from './Components/InnerHTML';
 
 function App() {
 
@@ -46,7 +47,8 @@ function App() {
   };*/
   return (
     <div className="App">
-    <UncontrolledComponents/>
+    <InnerHTML/>
+    {/* <UncontrolledComponents/> */}
     {/* <DynamicInputs/> */}
       {/* <div className='app-A'>
         <div className='search-bar-container'>
