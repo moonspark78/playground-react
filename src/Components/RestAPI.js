@@ -26,13 +26,12 @@ export const RestAPI = () => {
     };
 
     const updateData = (id) =>{
-         console.log(id);
          axios
-         .put("https://65899f2f324d4171525942ec.mockapi.io/users", {
+         .put(`https://65899f2f324d4171525942ec.mockapi.io/users/${id}`, {
             name: name,
             age: 56,
             hobbies: ["Boxing", "Cooking", "Soccer", "Coding", "Piano"],
-         }, id)
+         })
          .then((res) =>{
             console.log(res.data);
         })
