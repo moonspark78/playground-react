@@ -25,22 +25,45 @@ export const RestAPI = () => {
         })
     };
 
+    
     const updateData = (id) =>{
-         axios
-         .put(`https://65899f2f324d4171525942ec.mockapi.io/users/${id}`, {
+        axios
+        .put(`https://65899f2f324d4171525942ec.mockapi.io/users/${id}`, {
             name: name,
             age: 56,
             hobbies: ["Boxing", "Cooking", "Soccer", "Coding", "Piano"],
-         })
-         .then((res) =>{
+        })
+        .then((res) =>{
             console.log(res.data);
         })
         .catch((err) =>{
             console.log(err);
         })
     };
+    
+    
+    const deleteData = (id) =>{
+         axios
+         .delete(`https://65899f2f324d4171525942ec.mockapi.io/users/${id}`)
+         .then((res) =>{
+            getData()
+        })
+        .catch((err) =>{
+            console.log(err);
+        })
+    };
 
+    const getData = () =>{
+        axios
+        .get("https://65899f2f324d4171525942ec.mockapi.io/users", )
+        .then((res) =>{
+            setUsers(res.data);
+        })
+        .catch((err) =>{
+            console.log(err);
+        })
 
+    }
 
 
 
@@ -54,6 +77,8 @@ export const RestAPI = () => {
         .catch((err) =>{
             console.log(err);
         })
+
+        getData()
     },[])
 
 
@@ -74,6 +99,7 @@ export const RestAPI = () => {
                     <>
                         <h3>{`${user.id}. ${user.name}`}</h3>
                         <button onClick={() => updateData(user.id)} style={{borderRadius: "5px", width: "90px", height: "30px", color: "white"}}>Update</button>
+                        <button onClick={() => deleteData(user.id)} style={{borderRadius: "5px", width: "90px", height: "30px", color: "white", marginLeft: "7px"}}>Delete</button>
                     </>
                 )
             })
