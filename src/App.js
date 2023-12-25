@@ -13,6 +13,7 @@ import { DynamicInputs } from './Components/DynamicInputs';
 import { UncontrolledComponents } from './Components/UncontrolledComponents';
 import { InnerHTML } from './Components/InnerHTML';
 import { FragmentsInReact } from './Components/FragmentsInReact';
+import { RestAPI } from './Components/RestAPI';
 
 function App() {
 
@@ -48,7 +49,8 @@ function App() {
   };*/
   return (
     <div className="App">
-    <FragmentsInReact/>
+    <RestAPI/>
+    {/* <FragmentsInReact/> */}
     {/* <InnerHTML/> */}
     {/* <UncontrolledComponents/> */}
     {/* <DynamicInputs/> */}
