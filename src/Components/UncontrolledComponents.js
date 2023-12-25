@@ -5,7 +5,14 @@ export const UncontrolledComponents = () => {
     let age = React.createRef();
 
 
-    
+    const getName = (event) =>{
+        console.log(event.target.value);
+    }
+    const getAge = (event) =>{
+        console.log(event.target.value);
+    }
+
+
     const Submit = () =>{
         console.log(name.current.value);
         console.log(age.current.value);
@@ -18,12 +25,13 @@ export const UncontrolledComponents = () => {
 
 
         {/* Uncontrolled Component */}
-        <input placeholder='Name...' ref={name} />
-        <input  placeholder='Age...' ref={age} />
+        {/* ICI le composant n'est pas rafraichie */}
+        {/* <input placeholder='Name...' ref={name} />
+        <input  placeholder='Age...' ref={age} /> */}
 
         {/* Controlled Component */}
-        <input placeholder='Name...' ref={name} />
-        <input  placeholder='Age...' ref={age} />
+        <input placeholder='Name...'  onChange={getName}/>
+        <input  placeholder='Age...'  onChange={getAge}/>
         
         <button onClick={Submit} style={{borderRadius: "5px", marginLeft: "18px"}}>Submit</button>
     </div>
