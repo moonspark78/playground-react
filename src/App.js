@@ -21,6 +21,7 @@ import {UserData} from "./Contexts/GlobalContext";
 
 function App() {
   const [name, setName] = useState("Alice");
+  const [age, setAge] = useState(54);
 
   /* const [results, setResults] = useState([]); */
 
@@ -54,7 +55,7 @@ function App() {
   };*/
   return (
     <div className="App">
-    <UserData.Provider value={{name, setName}}>
+    <UserData.Provider value={{name, setName, age}}>
       <HomeContext />
       <ProfileContext/>
     </UserData.Provider>
