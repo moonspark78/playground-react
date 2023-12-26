@@ -15,8 +15,11 @@ import { InnerHTML } from './Components/InnerHTML';
 import { FragmentsInReact } from './Components/FragmentsInReact';
 import { RestAPI } from './Components/RestAPI';
 import { DebouncingReact } from './Components/DebouncingReact';
+import { HomeContext } from './Components/HomeContext';
+import { ProfileContext } from './Components/ProfileContext';
 
 function App() {
+  const [name, setName] = useState("Alice");
 
   /* const [results, setResults] = useState([]); */
 
@@ -50,7 +53,9 @@ function App() {
   };*/
   return (
     <div className="App">
-    <DebouncingReact/>
+    <HomeContext/>
+    <ProfileContext/>
+    {/* <DebouncingReact/> */}
     {/* <RestAPI/> */}
     {/* <FragmentsInReact/> */}
     {/* <InnerHTML/> */}
