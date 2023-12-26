@@ -13,7 +13,7 @@ export const ProfileContext = () => {
     <div>
       <h1>ProfileContext</h1>
 
-      <button onClick={() => setName("Laura")}>Change the Name</button>
+      <button onClick={() => setName("Messi")}>Change the Name</button>
     </div>
   )
 }
