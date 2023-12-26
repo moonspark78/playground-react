@@ -1,7 +1,17 @@
 import React from 'react'
 
-export const ProfileContext = () => {
+export const ProfileContext = ({setName}) => {
+
+
+
+
+
+
   return (
-    <div>ProfileContext</div>
+    <div>
+      <h1>ProfileContext</h1>
+
+      <button onClick={() => setName("Laura")}>Change the Name</button>
+    </div>
   )
 }

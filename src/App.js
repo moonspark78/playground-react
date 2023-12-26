@@ -53,8 +53,8 @@ function App() {
   };*/
   return (
     <div className="App">
-    <HomeContext/>
-    <ProfileContext/>
+    <HomeContext name={name}/>
+    <ProfileContext setName={setName}/>
     {/* <DebouncingReact/> */}
     {/* <RestAPI/> */}
     {/* <FragmentsInReact/> */}
