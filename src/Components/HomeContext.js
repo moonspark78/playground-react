@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const HomeContext = () => {
+export const HomeContext = ({name}) => {
   return (
-    <div>Home Context</div>
+    <div>
+      <h1>The Name is : {name}</h1>
+    </div>
   )
 }
