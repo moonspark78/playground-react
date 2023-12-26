@@ -14,6 +14,7 @@ import { UncontrolledComponents } from './Components/UncontrolledComponents';
 import { InnerHTML } from './Components/InnerHTML';
 import { FragmentsInReact } from './Components/FragmentsInReact';
 import { RestAPI } from './Components/RestAPI';
+import { DebouncingReact } from './Components/DebouncingReact';
 
 function App() {
 
@@ -49,7 +50,8 @@ function App() {
   };*/
   return (
     <div className="App">
-    <RestAPI/>
+    <DebouncingReact/>
+    {/* <RestAPI/> */}
     {/* <FragmentsInReact/> */}
     {/* <InnerHTML/> */}
     {/* <UncontrolledComponents/> */}
