@@ -1,4 +1,5 @@
-import React, { useContext } from 'react'
+import React from 'react'
+import { useContext } from 'react'
 import {UserData} from "../Contexts/GlobalContext";
 
 
@@ -11,8 +12,6 @@ export const ProfileContext = () => {
 
   return (
     <div>
-      <h1>ProfileContext</h1>
-
       <button onClick={() => setName("Messi")}>Change the Name</button>
     </div>
   )

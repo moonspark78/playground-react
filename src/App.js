@@ -55,7 +55,7 @@ function App() {
   return (
     <div className="App">
     <UserData.Provider value={{name, setName}}>
-      <HomeContext/>
+      <HomeContext />
       <ProfileContext/>
     </UserData.Provider>
     {/* <DebouncingReact/> */}
