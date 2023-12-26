@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 
 
@@ -8,9 +9,15 @@ const pinAPI = `https://api.postalpincode.in/pincode/`;
 
 
 export const DebouncingReact = () => {
+
+
+
+  
     const searchPin = (value) =>{
-        axios.get(pinAPI + value).then((response) =>{
-          console.log(response);
+        axios.get(pinAPI + value).then((res) =>{
+          console.log(res.data[0].PostOffice);
+        }).catch((error) =>{
+          console.log(error);
         })
     };
 
