@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import {UserData} from "../Contexts/GlobalContext";
 
-export const ProfileContext = ({setName}) => {
 
+export const ProfileContext = () => {
+  let {setName} = useContext(UserData)
 
 
 

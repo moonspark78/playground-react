@@ -17,6 +17,7 @@ import { RestAPI } from './Components/RestAPI';
 import { DebouncingReact } from './Components/DebouncingReact';
 import { HomeContext } from './Components/HomeContext';
 import { ProfileContext } from './Components/ProfileContext';
+import {UserData} from "./Contexts/GlobalContext";
 
 function App() {
   const [name, setName] = useState("Alice");
@@ -53,8 +54,10 @@ function App() {
   };*/
   return (
     <div className="App">
-    <HomeContext name={name}/>
-    <ProfileContext setName={setName}/>
+    <UserData.Provider value={{name, setName}}>
+      <HomeContext/>
+      <ProfileContext/>
+    </UserData.Provider>
     {/* <DebouncingReact/> */}
     {/* <RestAPI/> */}
     {/* <FragmentsInReact/> */}
