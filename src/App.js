@@ -32,12 +32,12 @@ function App() {
   const getPosts = () =>{
     fetch("https://jsonplaceholder.typicode.com/posts")
     .then((response) => response.json())
-    .then((json) =>setUsers(json));
+    .then((json) =>setPosts(json));
   }
 
   useEffect(() =>{
-    getPosts();
     getUsers();
+    getPosts();
   },[]);
 
 
@@ -80,10 +80,14 @@ function App() {
     {users.map((item) =>{
       return <h3>{item.name}</h3>
     })}
+
     <h1>Posts</h1>
     {posts.splice(0,10).map((item) =>{
       return <h3>{item.title}</h3>
     })}
+
+
+
     {/* <UserData.Provider value={{name, setName, age}}>
       <HomeContext />
       <ProfileContext/>
