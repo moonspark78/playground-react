@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 
 
-function useData(){
+export const useData = () => {
     const [users, setUsers] = useState([])
     const [posts, setPosts] = useState([])
 
@@ -26,6 +26,7 @@ function useData(){
         getUsers();
         getPosts();
     },[]);
-}
 
-export default useData;
+
+    return {users, posts}
+}

@@ -18,9 +18,12 @@ import { DebouncingReact } from './Components/DebouncingReact';
 import { HomeContext } from './Components/HomeContext';
 import { ProfileContext } from './Components/ProfileContext';
 import {UserData} from "./Contexts/GlobalContext";
+import {useData} from './hooks/useJSONPlaceholder';
 
 function App() {
 
+
+  let {users, posts} = useData();
 
   /* const [name, setName] = useState("Alice");
   const [age, setAge] = useState(54); */
