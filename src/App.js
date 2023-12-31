@@ -20,14 +20,6 @@ import { ProfileContext } from './Components/ProfileContext';
 import {UserData} from "./Contexts/GlobalContext";
 
 function App() {
-  const [users, setUsers] = useState([])
-  const [posts, setPosts] = useState([])
-
-
-  useEffect(() =>{
-    getUsers();
-    getPosts();
-  },[]);
 
 
   /* const [name, setName] = useState("Alice");
