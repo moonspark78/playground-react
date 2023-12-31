@@ -28,6 +28,19 @@ function App() {
     .then((response) => response.json())
     .then((json) =>setUsers(json));
   }
+
+  const getPosts = () =>{
+    fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((response) => response.json())
+    .then((json) =>setUsers(json));
+  }
+
+  useEffect(() =>{
+    getPosts();
+    getUsers();
+  },[]);
+
+
   /* const [name, setName] = useState("Alice");
   const [age, setAge] = useState(54); */
 
@@ -63,6 +76,14 @@ function App() {
   };*/
   return (
     <div className="App">
+    <h1>Users</h1>
+    {users.map((item) =>{
+      return <h3>{item.name}</h3>
+    })}
+    <h1>Posts</h1>
+    {posts.splice(0,10).map((item) =>{
+      return <h3>{item.title}</h3>
+    })}
     {/* <UserData.Provider value={{name, setName, age}}>
       <HomeContext />
       <ProfileContext/>
