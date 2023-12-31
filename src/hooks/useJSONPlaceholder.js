@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 const getUsers = () =>{
     fetch("https://jsonplaceholder.typicode.com/users")
     .then((response) => response.json())
@@ -10,5 +12,8 @@ const getPosts = () =>{
     .then((json) =>setPosts(json));
 }
 
-function useData()
+function useData(){
+    const [users, setUsers] = useState([])
+    const [posts, setPosts] = useState([])
+}
 
