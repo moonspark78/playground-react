@@ -22,8 +22,16 @@ import {useData} from './hooks/useJSONPlaceholder';
 
 function App() {
 
+  const promiseExample = () => {
 
-  let {users, posts} = useData();
+  };
+
+  useEffect(() => {
+    promiseExample();
+  },[]);
+
+
+ /*  let {users, posts} = useData(); */
 
   /* const [name, setName] = useState("Alice");
   const [age, setAge] = useState(54); */
@@ -60,7 +68,14 @@ function App() {
   };*/
   return (
     <div className="App">
-    <h1>Users</h1>
+
+
+
+
+
+
+
+     {/* <h1>Users</h1>
     {users.map((item) =>{
       return <h3>{item.name}</h3>
     })}
@@ -68,7 +83,7 @@ function App() {
     <h1>Posts</h1>
     {posts.splice(0,10).map((item) =>{
       return <h3>{item.title}</h3>
-    })}
+    })} */}
 
 
 
