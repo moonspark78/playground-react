@@ -23,7 +23,9 @@ import {useData} from './hooks/useJSONPlaceholder';
 function App() {
 
   const promiseExample = () => {
-
+    let friend = new Promise((resolve, reject) => {
+      let isChocolateEveryDay = true;
+    })
   };
 
   useEffect(() => {
