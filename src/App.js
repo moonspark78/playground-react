@@ -25,6 +25,17 @@ function App() {
   const promiseExample = () => {
     let friend = new Promise((resolve, reject) => {
       let isChocolateEveryDay = true;
+
+      if(isChocolateEveryDay){
+        resolve("Promise Resolve");
+      } else {
+        reject("Promse Broken");
+      }
+    });
+
+    friend()
+    .then((res) =>{
+      console.log(res);
     })
   };
 
