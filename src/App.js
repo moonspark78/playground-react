@@ -23,19 +23,22 @@ import {useData} from './hooks/useJSONPlaceholder';
 function App() {
 
   const promiseExample = () => {
-    let friend = new Promise((resolve, reject) => {
-      let isChocolateEveryDay = true;
+    const friend = new Promise((resolve, reject) => {
+      let isChocolateEveryDay = false;
 
       if(isChocolateEveryDay){
         resolve("Promise Resolve");
       } else {
-        reject("Promse Broken");
+        reject("Promise Broken");
       }
     });
 
-    friend()
-    .then((res) =>{
-      console.log(res);
+    friend
+    .then((resolve) =>{
+      console.log(resolve);
+    })
+    .catch((reject) =>{
+      console.log(`${reject}. No More FriendShip` );
     })
   };
 
