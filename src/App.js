@@ -22,30 +22,41 @@ import {useData} from './hooks/useJSONPlaceholder';
 
 function App() {
 
-  const promiseExample = () => {
-    const friend = new Promise((resolve, reject) => {
-      let isChocolateEveryDay = false;
-
-      if(isChocolateEveryDay){
-        resolve("Promise Resolve");
+  const promiseOne = (paramOne) => {
+    return new Promise((resolve, reject) => {
+      if(paramOne === "Alice"){
+        resolve("Promise Resolved");
       } else {
-        reject("Promise Broken");
+        reject("Promise Rejected");
       }
-    });
-
-    friend
-    .then((resolve) =>{
-      console.log(resolve);
     })
-    .catch((reject) =>{
-      console.log(`${reject}. No More FriendShip` );
-    })
-  };
+  }
 
-  useEffect(() => {
-    promiseExample();
-  },[]);
+    const promiseTwo = (paramTwo) =>{
+      return new Promise((resolve, reject) => {
+        if(paramTwo === "Promise Resolved"){
+          resolve("Alice is a Good Girl ")
+        } else {
+          reject("Alice still a Good girl")
+        }
+      });
+    };
 
+    const promiseMain = () =>{
+      promiseOne("Alice")
+        .then((fres) =>{
+          console.log(fres);
+          promiseTwo(fres)
+        })
+        .then((sres) =>{
+          console.log(sres);
+        })
+
+    };
+
+    useEffect(() =>{
+      promiseMain();
+    },[]);
 
  /*  let {users, posts} = useData(); */
 
