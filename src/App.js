@@ -42,16 +42,20 @@ function App() {
       });
     };
 
-    const promiseMain = async () =>{
-      let res = await promiseOne("Alice")
-      console.log(res);
-      let res2 = await promiseTwo(res)
-      console.log(res2);
-
+    const asyncMain = async () =>{
+      try {
+        let res = await promiseOne("Alice")
+        console.log(res);
+        let res2 = await promiseTwo(res)
+        console.log(res2);  
+      } catch {
+        console.log("promise rejected");
+      }
+     
     };
 
     useEffect(() =>{
-      promiseMain();
+      asyncMain();
     },[]);
 
  /*  let {users, posts} = useData(); */
