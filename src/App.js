@@ -46,10 +46,13 @@ function App() {
       promiseOne("Alice")
         .then((fres) =>{
           console.log(fres);
-          promiseTwo(fres)
+          return promiseTwo(fres)
         })
         .then((sres) =>{
           console.log(sres);
+        })
+        .catch((err) =>{
+          console.log(err);
         })
 
     };
