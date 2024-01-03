@@ -43,7 +43,10 @@ function App() {
     };
 
     const promiseMain = async () =>{
-      await promiseOne("Alice")
+      let res = await promiseOne("Alice")
+      console.log(res);
+      let res2 = await promiseTwo(res)
+      console.log(res2);
 
     };
 
