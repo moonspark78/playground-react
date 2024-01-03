@@ -42,18 +42,8 @@ function App() {
       });
     };
 
-    const promiseMain = () =>{
-      promiseOne("Alice")
-        .then((fres) =>{
-          console.log(fres);
-          return promiseTwo(fres)
-        })
-        .then((sres) =>{
-          console.log(sres);
-        })
-        .catch((err) =>{
-          console.log(err);
-        })
+    const promiseMain = async () =>{
+      await promiseOne("Alice")
 
     };
 
